@@ -1,3 +1,15 @@
+NAME 		: K.R.L.LASHINI
+
+REG.NO 		: IT12024582
+
+SUBJECT 	: ENTERPRISE STANDARDS AND BEST PRACTICES FOR 			  IT INFRASTRUCTURE
+
+LAB			: 02
+
+DATE		: 17.07.2015
+
+
+
  
 # CREATING AN AMAZON EBS-BACKED WINDOWS AMI  #
 
@@ -6,26 +18,26 @@
 ## Launching an Instance
 
 
-1. Open the Amazon EC2 console.
+1.Open the Amazon EC2 console.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731165/3ddd4146-2c13-11e5-992b-326fd8e82664.png)
 
 
 
-2. In the navigation bar at the top of the screen, the current region is displayed. Select the region for the instance.  
+2.In the navigation bar at the top of the screen, the current region is displayed. Select the region for the instance.  
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731167/3de50908-2c13-11e5-98dd-d329d5102113.png)
 
 
 
 
-3. From the Amazon EC2 console dashboard, click Launch Instance.
+3.From the Amazon EC2 console dashboard, click Launch Instance.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731166/3de1e0f2-2c13-11e5-8ca8-fa34fa69fe34.png)
 
 
 
-4. On the Choose an Amazon Machine Image (AMI) page, choose an AMI.
+4.On the Choose an Amazon Machine Image (AMI) page, choose an AMI.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731169/3e1309ac-2c13-11e5-80f3-71872ae6e741.png)
 
@@ -33,7 +45,7 @@
 
 
 
-5. On the Choose an Instance Type page, select the hardware configuration and size of the instance to launch. Eligible for the free tier, select the t2.micro instance type. 
+5.On the Choose an Instance Type page, select the hardware configuration and size of the instance to launch. Eligible for the free tier, select the t2.micro instance type. 
 Note --> Set up an instance quickly for testing purposes, you can click Review and Launch at this point to accept default configuration settings, and launch your instance. 
 
 To configure your instance further, click Next: Configure Instance Details.
@@ -42,19 +54,19 @@ To configure your instance further, click Next: Configure Instance Details.
 
 
 
-6. On the Configure Instance Details page, change the settings as necessary and then click Next. ( Here I have selected the default configuration settings )
+6.On the Configure Instance Details page, change the settings as necessary and then click Next. ( Here I have selected the default configuration settings )
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731173/3e3bd756-2c13-11e5-8f81-5ae50e3ec1d4.png)
 
 
 
-7. On the Add Storage page, you can specify volumes to attach to the instance besides the volumes specified by the AMI (such as the root device volume) then click Next: Tag Instance when you have finished.
+7.On the Add Storage page, you can specify volumes to attach to the instance besides the volumes specified by the AMI (such as the root device volume) then click Next: Tag Instance when you have finished.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731172/3e38e578-2c13-11e5-8633-8a67b6bc4154.png)
 
 
 
-8. On the Configure Security Group page, use a security group to define firewall rules for your instance. These rules specify which incoming network traffic is delivered to your instance. All other traffic is ignored. Select or create a security group and then click Review and Launch.
+8.On the Configure Security Group page, use a security group to define firewall rules for your instance. These rules specify which incoming network traffic is delivered to your instance. All other traffic is ignored. Select or create a security group and then click Review and Launch.
 
 Here I have selected create a new security group.
 
@@ -68,13 +80,13 @@ The wizard automatically defines an inbound rule to allow to you connect to your
 
 
 
-9. On the Review Instance Launch page, check the details of your instance, and make any necessary changes by clicking the appropriate Edit link.When you are ready, click Launch.
+9.On the Review Instance Launch page, check the details of your instance, and make any necessary changes by clicking the appropriate Edit link.When you are ready, click Launch.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731175/3e426d0a-2c13-11e5-91d8-d33a9eb2cb72.png)
 
 
 
-10. In the Select an existing key pair or create a new key pair dialog box, you can choose an existing key pair, or create a new one. Here I have created a new key pair.
+10.In the Select an existing key pair or create a new key pair dialog box, you can choose an existing key pair, or create a new one. Here I have created a new key pair.
 
 To launch your instance, select the acknowledgment check box, then click Launch Instances.
 
@@ -85,7 +97,7 @@ Note --> If you select the Proceed without key pair option, you won't be able to
 
 
 
-11. Launch Instance.
+11.Launch Instance.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8731178/3e6abc24-2c13-11e5-9226-6fa5c16775b2.png)
 
@@ -101,37 +113,37 @@ Before you connect to your Linux instance using PuTTY, complete the following pr
 
 
 
-1. Install PuTTY
+1.Install PuTTY
 Download and install PuTTY
 
-2. Get the ID of the instance
+2.Get the ID of the instance
 u can get the ID of your instance using the Amazon EC2 console
 
-3. Get the public DNS name of the instance
+3.Get the public DNS name of the instance
 You can get the public DNS for your instance using the Amazon EC2 console (check the Public DNS column; if this column is hidden, click the Show/Hide icon and select Public DNS)
 
-4. Locate the private key
+4.Locate the private key
 your IP address to your instance
 You'll need the fully-qualified path of the .pem file for the key pair that you specified when you launched the instance.
 
-5. Enable inbound SSH traffic from 
+5.Enable inbound SSH traffic from 
 
 
 ## CONVERTING YOUR PRIVATE KEY USING PUTTYGEN ##
 
 
-1. Start PuTTYgen. Under Type of key to generate, select SSH-2 RSA.
+1.Start PuTTYgen. Under Type of key to generate, select SSH-2 RSA.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733106/79febc7a-2c1f-11e5-8ae3-8825bf5db428.png)
 
 
-2. lick Load. By default, PuTTYgen displays only files with the extension .ppk. To locate your .pem file, select the option to display files of all types.Select your .pem file for the key pair that you specified when you launch your instance, and then click Open. Click OK to dismiss the confirmation dialog box.
+2.Click Load. By default, PuTTYgen displays only files with the extension .ppk. To locate your .pem file, select the option to display files of all types.Select your .pem file for the key pair that you specified when you launch your instance, and then click Open. Click OK to dismiss the confirmation dialog box.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733107/7a044a00-2c1f-11e5-9c9c-df5a6b43f231.png)
 
 
 
-3. Click Save private key to save the key in the format that PuTTY can use. PuTTYgen displays a warning about saving the key without a passphrase. Click Yes.
+3.Click Save private key to save the key in the format that PuTTY can use. PuTTYgen displays a warning about saving the key without a passphrase. Click Yes.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733111/7a08e04c-2c1f-11e5-956b-1f21804e20a5.png)
 
@@ -139,7 +151,7 @@ You'll need the fully-qualified path of the .pem file for the key pair that you 
 
 
 
-4.  Specify the same name for the key that you used for the key pair (for example, my-key-pair). PuTTY automatically adds the .ppk file extension.
+4.Specify the same name for the key that you used for the key pair (for example, my-key-pair). PuTTY automatically adds the .ppk file extension.
 
 Your private key is now in the correct format for use with PuTTY. You can now connect to your instance using PuTTY's SSH client.
 
@@ -147,19 +159,19 @@ Your private key is now in the correct format for use with PuTTY. You can now co
 
 
 
-5. Start PuTTY 
+5.Start PuTTY 
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733113/7a3227e0-2c1f-11e5-8778-835f51105a19.png)
 
 
 
-6. In the Category pane, select Session and complete fields.In the Host Name box, enter user_name@public_dns_name. Be sure to specify the appropriate user name for your AMI. Under Connection type, select SSH. Ensure that Port is 22.
+6.In the Category pane, select Session and complete fields.In the Host Name box, enter user_name@public_dns_name. Be sure to specify the appropriate user name for your AMI. Under Connection type, select SSH. Ensure that Port is 22.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733114/7a33c6ae-2c1f-11e5-98ac-40d83a109a1d.png)
 
 
 
-7. In the Category pane, expand Connection, expand SSH, and then select Auth. Complete the following:
+7.In the Category pane, expand Connection, expand SSH, and then select Auth. Complete the following:
 
 
 Click Browse.
@@ -177,18 +189,18 @@ If you plan to start this session again later, you can save the session informat
 # CREATING AN AMAZON EBS SNAPSHOT #
 
 
-1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/. Choose Snapshots in the navigation pane
+1.Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/. Choose Snapshots in the navigation pane
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733655/8771fd92-2c22-11e5-9c47-3c0278c6be63.png)
 
 
-2. Choose Create Snapshot
+2.Choose Create Snapshot
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733657/8773532c-2c22-11e5-98cc-90f214e08c14.png)
 
 
 
-3. In the Create Snapshot dialog box, select the volume to create a snapshot for, and then choose Create.
+3.In the Create Snapshot dialog box, select the volume to create a snapshot for, and then choose Create.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733658/8774afc4-2c22-11e5-9a94-797d602a81f6.png)
 
@@ -199,7 +211,7 @@ If you plan to start this session again later, you can save the session informat
 
 
 
-1. In the navigation pane, click Instances and select your instance. Click Actions, select Image, and then click Create Image.
+1.In the navigation pane, click Instances and select your instance. Click Actions, select Image, and then click Create Image.
 (note-->
 If this option is disabled, your instance isn't an Amazon EBS-backed instance.)
 
@@ -207,7 +219,7 @@ If this option is disabled, your instance isn't an Amazon EBS-backed instance.)
 
 
 
-2. In the Create Image dialog box, specify the following, and then click Create Image.
+2.In the Create Image dialog box, specify the following, and then click Create Image.
 
 
 
@@ -220,13 +232,13 @@ If this option is disabled, your instance isn't an Amazon EBS-backed instance.)
 
 
 
-3. We can add new volume as shown in the print screen below
+3.We can add new volume as shown in the print screen below
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733970/6b4daede-2c24-11e5-9113-3cc29ce3f48b.png)
 
 
 
-4. Press create. 
+4.Press create. 
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8733966/6b4c33ba-2c24-11e5-9d95-3a69c49a86fb.png)
 
@@ -250,25 +262,25 @@ If this option is disabled, your instance isn't an Amazon EBS-backed instance.)
 **To create an AMI from a snapshot using the console**
 
 
-1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.In the navigation pane, under Elastic Block Store, choose Snapshots.
+1.Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.In the navigation pane, under Elastic Block Store, choose Snapshots.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8734344/10e9ca7e-2c27-11e5-8810-2d80af1d47bf.png)
 
 
 
-2. Choose the snapshot, and then choose Create Image from the Actions list.
+2.Choose the snapshot, and then choose Create Image from the Actions list.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8734345/10ebb49c-2c27-11e5-8eb6-aa89a1c6460a.png)
 
 
 
-3. In the Create Image from EBS Snapshot dialog box, complete the fields to create your AMI, then choose Create. If you're re-creating a parent instance, then choose the same options as the parent instance.
+3.In the Create Image from EBS Snapshot dialog box, complete the fields to create your AMI, then choose Create. If you're re-creating a parent instance, then choose the same options as the parent instance.
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8734346/10ef4cec-2c27-11e5-9f9a-d83518c7b4a0.png)
 
 
 
-4. Press Create
+4.Press Create
 
 ![](https://cloud.githubusercontent.com/assets/13194331/8734347/10efa3cc-2c27-11e5-8936-6c4a7e23dc2d.png)
 
